@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Report</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* ボディのスタイル */
+      body {
+        font-family: "Roboto", sans-serif;
+        line-height: 1.6;
+        padding: 20px;
+        background-color: #121212; /* ダークモード背景 */
+        color: #e0e0e0; /* 明るいテキスト色 */
+      }
+
+      /* ヘッダーのスタイル */
+      h1 {
+        color: #00bcd4; /* サイバーな青色 */
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 2.5em;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* グロー効果 */
+      }
+
+      /* テーブル全体のスタイル */
+      table {
+        width: 90%;
+        margin: 0 auto;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6); /* より強いシャドウ */
+        background-color: #1e1e1e; /* ダークテーブル背景 */
+      }
+
+      /* テーブルのヘッダー行のスタイル */
+      thead th {
+        background-color: #00bcd4; /* サイバーな青色 */
+        color: #121212; /* 暗いテキスト色 */
+        padding: 12px 15px;
+        text-align: left;
+        font-weight: bold;
+        text-transform: uppercase; /* テキストの大文字化 */
+      }
+
+      /* テーブルのボディ行のスタイル */
+      tbody tr:nth-child(even) {
+        background-color: #2a2a2a; /* ダークな行背景 */
+      }
+
+      tbody tr:nth-child(odd) {
+        background-color: #1e1e1e; /* ダークな行背景 */
+      }
+
+      /* テーブルセルのスタイル */
+      td {
+        padding: 12px 15px;
+        border-bottom: 1px solid #333; /* よりダークなボーダー */
+      }
+
+      /* テーブルの全体的なスタイル */
+      table,
+      th,
+      td {
+        border: 1px solid #333; /* ダークなボーダー */
+      }
+
+      /* テーブルの最上部のマージン調整 */
+      thead {
+        border-bottom: 3px solid #00bcd4; /* サイバーな青色のボーダー */
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>weather report</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>location</th>
+          <th>windDirection</th>
+          <th>windStrength</th>
+          <th>weathers</th>
+          <th>pressure</th>
+          <th>temperature</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% weathers.forEach(weather=> { %>
+        <tr>
+          <td><%= weather.location %></td>
+          <td><%= weather.windDirection %></td>
+          <td><%= weather.windStrength %></td>
+          <td><%= weather.weather %></td>
+          <td><%= weather.pressure %></td>
+          <td><%= weather.temperature %></td>
+        </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  </body>
+</html>

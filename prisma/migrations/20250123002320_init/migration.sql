@@ -5,6 +5,6 @@ CREATE TABLE "WeatherReport" (
     "windDirection" TEXT NOT NULL,
     "windStrength" TEXT NOT NULL,
     "weather" TEXT NOT NULL,
-    "pressure" REAL NOT NULL,
+    "pressure" INTEGER NOT NULL,
     "temperature" REAL NOT NULL
 );

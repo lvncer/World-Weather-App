@@ -6,11 +6,6 @@ var logger = require("morgan");
 const session = require("express-session");
 
 var indexRouter = require("./routes/index");
-var usersRouter = require("./routes/users");
-var helloRouter = require("./routes/hello");
-var scheduleRouter = require("./routes/schedule");
-var scheduleRouter = require("./routes/hotel");
-var superRouter = require("./routes/super");
 var weatherRouter = require("./routes/weather");
 
 var app = express();
@@ -34,10 +29,6 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/", indexRouter);
-app.use("/users", usersRouter);
-app.use("/hello", helloRouter);
-app.use("/schedules", scheduleRouter);
-app.use("/super", superRouter);
 app.use("/weather", weatherRouter);
 
 // catch 404 and forward to error handler

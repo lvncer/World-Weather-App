@@ -7,47 +7,12 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model User {
-  id Int @id @default(autoincrement())
-  name String @unique
-  pass String
-  mail String?
-  age Int @default(0)
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-}
-
-model Schedule {
-  id Int @id @default(autoincrement())
-  train String
-  station String?
-  arrivalTime DateTime?
-  departureTime DateTime?
-}
-
-model Hotel {
-  id Int @id @default(autoincrement())
-  name String
-  single Int?
-  double Int?
-  delux Int?
-  Ioc Int?
-}
-
-model Vegetable {
-  id          Int      @id @default(autoincrement())
-  name        String
-  description String?
-  stock       Int
-  price       Float
-}
-
 model WeatherReport {
   id        Int      @id @default(autoincrement())
-  location  String   // 地点
-  windDirection String // 風向
-  windStrength  String // 風力
-  weather   String   // 天気
-  pressure   Int    // 気圧
-  temperature Float   // 気温
+  location  String
+  windDirection String
+  windStrength  String
+  weather   String
+  pressure   Int
+  temperature Float
 }

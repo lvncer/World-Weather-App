@@ -1,1 +1,25 @@
-node_modules
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# SQLite データベース
+*.db
+*.db-journal
+
+# Prisma
+prisma/generated/
+
+# 環境変数ファイル
+.env
+.env.local
+.env.*.local
+
+# その他
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.log
+*.tmp
